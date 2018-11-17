@@ -29,12 +29,30 @@ public class _03_MurderOfCrows {
          * 1. One of the Crows has eaten the diamond. You need to search through the stomach of each Crow, 
          * then print the name of the guilty Crow.
          */
-        if(theMurder==) {
-        	
+		
+		if() {
+      
         }
         else if() {
         	
         }
+		for(int y= 0; y< theMurder.size(); y++) {
+			if(theMurder.get(y).getStomachContents("Rok")) {
+				System.out.println();
+			}
+			else if(theMurder.get(y).getStomachContents("Merle")) {
+				System.out.println();
+			}
+			else if(theMurder.get(y).getStomachContents("Poe")) {
+				
+			}
+			else if(theMurder.get(y).getStomachContents("Grenwyn")) {
+				
+			}
+			else if(theMurder.get(y).getStomachContents("Crawford")) {
+				
+			}
+		}
         /* 2. How many innocent crows had to die before the diamond was found? */
     	
     }
@@ -61,6 +79,11 @@ class Crow {
 	public Crow(String name) {
 		this.name = name;
 		fillCrowsStomach();
+	}
+
+	public boolean getStomachContents(String string) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	private void fillCrowsStomach() {
