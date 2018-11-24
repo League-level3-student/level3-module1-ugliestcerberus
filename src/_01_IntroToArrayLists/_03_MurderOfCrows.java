@@ -31,26 +31,36 @@ public class _03_MurderOfCrows {
          */
 	
 		for(int y= 0; y< theMurder.size(); y++) {
-			if(theMurder.get(y).getStomachContents("Rok")) {
-				System.out.println("Rok is Guilty");
+			//if(theMurder.get(y).getStomachContents()) {
+				//System.out.println("Rok is Guilty");
+			//}
+			//if(murderOfCrows.theMurder("Merle").getStomachContents()) {
+				//getStomachContents.equals("diamond");
+			//}
+			ArrayList<String>contents= theMurder.get(y).getStomachContents();
+			for(int u= 0; u< contents.size(); u++) {
+			if(contents.get(u).hidetheDiamond()) {
+				
 			}
-			else if(theMurder.get(y).getStomachContents("Merle")) {
-				System.out.println("Merle is Guilty");
 			}
-			else if(theMurder.get(y).getStomachContents("Poe")) {
-				System.out.println("Poe is Guilty");
-			}
-			else if(theMurder.get(y).getStomachContents("Grenwyn")) {
-				System.out.println("Grenwyn is Guilty");
-			}
-			else if(theMurder.get(y).getStomachContents("Crawford")) {
-				System.out.println("Crawford is Guilty");
-			}
+			//theMurder.get(y); means that we are only getting a 
+			//else if(theMurder.get(y).getStomachContents("Merle")) {
+			//	System.out.println("Merle is Guilty");
+			//}
+			//else if(theMurder.get(y).getStomachContents("Poe")) {
+			//	System.out.println("Poe is Guilty");
+			//}
+			//else if(theMurder.get(y).getStomachContents("Grenwyn")) {
+			//	System.out.println("Grenwyn is Guilty");
+			//}
+			//else if(theMurder.get(y).getStomachContents("Crawford")) {
+			//	System.out.println("Crawford is Guilty");
 			System.out.println(y);
 		}
+}
         /* 2. How many innocent crows had to die before the diamond was found? */
     	
-    }
+    
 
 	private void initializeCrows() {
 		theMurder.add(new Crow("Rok"));
@@ -76,10 +86,10 @@ class Crow {
 		fillCrowsStomach();
 	}
 
-	public boolean getStomachContents(String string) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	//public boolean getStomachContents(String string) {
+
+		//return false;
+	//}
 
 	private void fillCrowsStomach() {
 		for (int i = 0; i < 10; i++)
