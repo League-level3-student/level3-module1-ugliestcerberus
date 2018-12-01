@@ -12,8 +12,6 @@ package _01_IntroToArrayLists;
 import java.util.ArrayList;
 import java.util.Random;
 
-import javax.swing.JOptionPane;
-
 public class _03_MurderOfCrows {
 
 	ArrayList<Crow> theMurder = new ArrayList<Crow>();
@@ -25,42 +23,23 @@ public class _03_MurderOfCrows {
 	}
 
 	private void findTheDiamond() {
-        /*
-         * 1. One of the Crows has eaten the diamond. You need to search through the stomach of each Crow, 
-         * then print the name of the guilty Crow.
-         */
-	
-		for(int y= 0; y< theMurder.size(); y++) {
-			//if(theMurder.get(y).getStomachContents()) {
-				//System.out.println("Rok is Guilty");
-			//}
-			//if(murderOfCrows.theMurder("Merle").getStomachContents()) {
-				//getStomachContents.equals("diamond");
-			//}
-			ArrayList<String>contents= theMurder.get(y).getStomachContents();
-			for(int u= 0; u< contents.size(); u++) {
-			if(contents.get(u).hidetheDiamond()) {
-				
+		/*
+		 * 1. One of the Crows has eaten the diamond. You need to search through the
+		 * stomach of each Crow, then print the name of the guilty Crow.
+		 */
+
+		for (int y = 0; y < theMurder.size(); y++) {
+			ArrayList<String> contents = theMurder.get(y).getStomachContents();
+			for (int u = 0; u < contents.size(); u++) {
+				if (contents.get(u).equals("diamond")) {
+					System.out.println(theMurder.get(y).getName());
+				}
 			}
-			}
-			//theMurder.get(y); means that we are only getting a 
-			//else if(theMurder.get(y).getStomachContents("Merle")) {
-			//	System.out.println("Merle is Guilty");
-			//}
-			//else if(theMurder.get(y).getStomachContents("Poe")) {
-			//	System.out.println("Poe is Guilty");
-			//}
-			//else if(theMurder.get(y).getStomachContents("Grenwyn")) {
-			//	System.out.println("Grenwyn is Guilty");
-			//}
-			//else if(theMurder.get(y).getStomachContents("Crawford")) {
-			//	System.out.println("Crawford is Guilty");
+
 			System.out.println(y);
 		}
-}
-        /* 2. How many innocent crows had to die before the diamond was found? */
-    	
-    
+	}
+	/* 2. How many innocent crows had to die before the diamond was found? */
 
 	private void initializeCrows() {
 		theMurder.add(new Crow("Rok"));
@@ -86,10 +65,10 @@ class Crow {
 		fillCrowsStomach();
 	}
 
-	//public boolean getStomachContents(String string) {
+	// public boolean getStomachContents(String string) {
 
-		//return false;
-	//}
+	// return false;
+	// }
 
 	private void fillCrowsStomach() {
 		for (int i = 0; i < 10; i++)
