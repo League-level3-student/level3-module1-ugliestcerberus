@@ -15,11 +15,13 @@ import java.util.Random;
 public class _03_MurderOfCrows {
 
 	ArrayList<Crow> theMurder = new ArrayList<Crow>();
+	int count;
 
 	public static void main(String[] args) {
 		_03_MurderOfCrows murderOfCrows = new _03_MurderOfCrows();
 		murderOfCrows.initializeCrows();
 		murderOfCrows.findTheDiamond();
+
 	}
 
 	private void findTheDiamond() {
@@ -33,11 +35,13 @@ public class _03_MurderOfCrows {
 			for (int u = 0; u < contents.size(); u++) {
 				if (contents.get(u).equals("diamond")) {
 					System.out.println(theMurder.get(y).getName());
+				} else {
+					count++;
 				}
 			}
-
 			System.out.println(y);
 		}
+		System.out.println(count);
 	}
 	/* 2. How many innocent crows had to die before the diamond was found? */
 

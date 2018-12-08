@@ -32,22 +32,18 @@ public class _04_RemovingStuffFromArrayLists {
 		stuffIFoundInTheYard.add(new Worm());
 		stuffIFoundInTheYard.add(new Dirt());
 
-		System.out.println(stuffIFoundInTheYard.size());
-
 		/* TODO 1: Clean out the dirt but keep the delicious worms. */
-		//stuffIFoundInTheYard.remove
-		
-		
-		for(int y=0; y< stuffIFoundInTheYard.size(); y++) {
-		if() {
-			stuffIFoundInTheYard.remove([y]);
+		// anything that is character should be surrounded with single quotation marks
+		// stuffIFoundInTheYard.remove
+
+		for (int y = 0; y < stuffIFoundInTheYard.size(); y++) {
+			stuffIFoundInTheYard.remove(y);
+			if (stuffIFoundInTheYard.get(y).equals("dirt")) {
+				System.out.println(stuffIFoundInTheYard.get(y));
+			}
+			System.out.println(stuffIFoundInTheYard.size());
 		}
-			
-		}
-		
-		
-		
-		
+
 		System.out.println(stuffIFoundInTheYard.size()); // should be 2
 
 		ArrayList<Character> truth = new ArrayList<Character>();
@@ -83,8 +79,13 @@ public class _04_RemovingStuffFromArrayLists {
 		truth.add('r');
 		truth.add('#');
 		/* TODO 2: Remove the hash symbols and print out the truth. */
+		for (int m = 0; m < truth.size(); m++) {
+			if (truth.get(m) == '#') {
+				truth.remove(m);
+			} else {
+				System.out.println(truth.size());
+			}
 
-		
-		
+		}
 	}
 }
