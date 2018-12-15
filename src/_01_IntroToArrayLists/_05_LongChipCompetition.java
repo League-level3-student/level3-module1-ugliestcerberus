@@ -16,6 +16,8 @@ public class _05_LongChipCompetition {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
 
 		for (int o = 0; o < lcc.theBeatles.size(); o++) {
+			ArrayList<> people = lcc.theBeatles.get(o);
+
 			lcc.theBeatles.get(0);
 
 		}
