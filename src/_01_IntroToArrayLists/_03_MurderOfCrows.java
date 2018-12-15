@@ -42,6 +42,7 @@ public class _03_MurderOfCrows {
 			System.out.println(y);
 		}
 		System.out.println(count);
+		System.out.println(count + " cows had to die");
 	}
 	/* 2. How many innocent crows had to die before the diamond was found? */
 

@@ -37,11 +37,16 @@ public class _04_RemovingStuffFromArrayLists {
 		// stuffIFoundInTheYard.remove
 
 		for (int y = 0; y < stuffIFoundInTheYard.size(); y++) {
+			// This for loop sets an array
 			stuffIFoundInTheYard.remove(y);
+			// This array loops once through the array and removes the values
 			if (stuffIFoundInTheYard.get(y).equals("dirt")) {
+				// sets a condition of what shall be removed
 				System.out.println(stuffIFoundInTheYard.get(y));
+				// This gets the values that weren't removed.
 			}
 			System.out.println(stuffIFoundInTheYard.size());
+			// This prints the number of values that are left in the array.
 		}
 
 		System.out.println(stuffIFoundInTheYard.size()); // should be 2
@@ -82,8 +87,9 @@ public class _04_RemovingStuffFromArrayLists {
 		for (int m = 0; m < truth.size(); m++) {
 			if (truth.get(m) == '#') {
 				truth.remove(m);
+				m--;
 			} else {
-				System.out.println(truth.size());
+				System.out.println(truth.get(m));
 			}
 
 		}
