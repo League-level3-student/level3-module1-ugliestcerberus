@@ -11,9 +11,11 @@ public class _05_LongChipCompetition {
 	 * initialize The Beatles before you start your search. *
 	 **/
 	private ArrayList<Beatle> theBeatles = new ArrayList<Beatle>();
+	//This is the member variable. 
 
 	public static void main(String[] args) {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
+		//This is the object made from the class. 
 		// for (int o = 0; o < lcc.theBeatles.size(); o++) {
 		// ArrayList<Chip> thepeople = new ArrayList<Chip>();
 		// lcc.theBeatles.get(0);
