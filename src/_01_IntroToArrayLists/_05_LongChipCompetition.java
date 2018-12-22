@@ -14,14 +14,30 @@ public class _05_LongChipCompetition {
 
 	public static void main(String[] args) {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
+		// for (int o = 0; o < lcc.theBeatles.size(); o++) {
+		// ArrayList<Chip> thepeople = new ArrayList<Chip>();
+		// lcc.theBeatles.get(0);
+		// lcc.initializeBeatles();
 
-		for (int o = 0; o < lcc.theBeatles.size(); o++) {
-			ArrayList<> people = lcc.theBeatles.get(o);
-
+		// for (int y = 0; y < lcc.theBeatles.size(); y++) {
+		// ArrayList<Chip> thenames = new ArrayList<Chip>();
+		// lcc.theBeatles.get(j).getChips();
+		// lcc.theBeatles.initializePlateOfChips();
+		for (int h = 0; h < lcc.theBeatles.size(); h++) {
+			ArrayList<Chip> current = lcc.theBeatles.get(h).getChips();
 			lcc.theBeatles.get(0);
-
+			lcc.initializeBeatles();
+			lcc.getTheBand();
+			for (int j = 0; j < current.size(); j++) {
+				lcc.theBeatles.get(j).getChips();
+				// initializePlateOfChips();
+				System.out.println(lcc.theBeatles.get(j));
+			}
 		}
 	}
+	// }
+
+	// }
 
 	private void initializeBeatles() {
 		Beatle george = new Beatle("George");
