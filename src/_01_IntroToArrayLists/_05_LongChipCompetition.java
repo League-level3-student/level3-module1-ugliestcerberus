@@ -11,32 +11,43 @@ public class _05_LongChipCompetition {
 	 * initialize The Beatles before you start your search. *
 	 **/
 	private ArrayList<Beatle> theBeatles = new ArrayList<Beatle>();
-	//This is the member variable. 
+	// This is the member variable.
 
 	public static void main(String[] args) {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
-		//This is the object made from the class. 
+		lcc.initializeBeatles();
+		Object largest;
+
+		// This is the object made from the class.
 		// for (int o = 0; o < lcc.theBeatles.size(); o++) {
 		// ArrayList<Chip> thepeople = new ArrayList<Chip>();
 		// lcc.theBeatles.get(0);
 		// lcc.initializeBeatles();
-
 		// for (int y = 0; y < lcc.theBeatles.size(); y++) {
 		// ArrayList<Chip> thenames = new ArrayList<Chip>();
 		// lcc.theBeatles.get(j).getChips();
 		// lcc.theBeatles.initializePlateOfChips();
+		// for(Object Beatles: {
+		// lcc.theBeatles.get(0);
+		// lcc.getTheBand();
+		// }
 		for (int h = 0; h < lcc.theBeatles.size(); h++) {
 			ArrayList<Chip> current = lcc.theBeatles.get(h).getChips();
-			lcc.theBeatles.get(0);
-			lcc.initializeBeatles();
-			lcc.getTheBand();
+			largest = current.get(h).getLength();
 			for (int j = 0; j < current.size(); j++) {
-				lcc.theBeatles.get(j).getChips();
-				// initializePlateOfChips();
-				System.out.println(lcc.theBeatles.get(j));
+				// System.out.println(current);
+
+				System.out.println(largest);
+				if (current.get(h) == largest) {
+					System.out.println(lcc.theBeatles);
+
+				}
 			}
+
 		}
 	}
+
+	// }
 	// }
 
 	// }
