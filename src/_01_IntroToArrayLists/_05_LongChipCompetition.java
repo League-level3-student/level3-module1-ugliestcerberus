@@ -31,12 +31,14 @@ public class _05_LongChipCompetition {
 		// lcc.theBeatles.get(0);
 		// lcc.getTheBand();
 		// }
+		double largest2 = 0;
+
 		for (int h = 0; h < lcc.theBeatles.size(); h++) {
 			ArrayList<Chip> current = lcc.theBeatles.get(h).getChips();
-			largest = current.get(h).getLength();
+
 			for (int j = 0; j < current.size(); j++) {
 				// System.out.println(current);
-
+				largest = current.get(j).getLength();
 				System.out.println(largest);
 				if (current.get(h) == largest) {
 					System.out.println(lcc.theBeatles);
