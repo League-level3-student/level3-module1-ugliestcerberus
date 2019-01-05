@@ -70,6 +70,8 @@ public class _06_IPodShuffle implements KeyListener, ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-	JButton ;		
+		// if(jbutton==true) {
+		// playrandommusic;
+		// }
 	}
 }
