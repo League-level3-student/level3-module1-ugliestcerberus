@@ -22,14 +22,14 @@ public class IntegerStack {
 			System.out.println(numbers1);
 		}
 		// D. set the member array equal to the new array.
-		
+		numbers1= numbers;
 	}
 
 	// 4. Complete the steps in the pop method.
 	public int pop() {
 		// A. create an integer variable and initialize it to the
 		// last element of the member array.
-
+		
 		// B. create a new array that is one element smaller than the member array
 
 		// C. iterate through the new array and copy every element from the
