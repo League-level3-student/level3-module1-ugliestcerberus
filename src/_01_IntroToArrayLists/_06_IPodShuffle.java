@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 //Copyright The League of Amazing Programmers, 2015
@@ -16,15 +17,16 @@ public class _06_IPodShuffle implements KeyListener, ActionListener {
 	JFrame jframe = new JFrame();
 	JPanel jpanel = new JPanel();
 	JButton jbutton = new JButton();
+	JButton jbutton1= new JButton();
 	Song name = new Song("demo.mp3");
-	Song name2 = new Song("drum.wav");
+	Song name2 = new Song("fowl.mp3");
 
 	public _06_IPodShuffle() {
 
 		// 1. Use the Song class the play the demo.mp3 file.
 
 		// Song name1= new Song();
-		name.play();
+		//name.play();
 
 		/**
 		 * 2. Congratulations on completing the sound check! * Now we want to make an
@@ -39,39 +41,41 @@ public class _06_IPodShuffle implements KeyListener, ActionListener {
 		jframe.setVisible(true);
 		// musicplaylists.add
 		jframe.add(jpanel);
-		jframe.pack();
 		jpanel.add(jbutton);
+		jpanel.add(jbutton1);
 		jbutton.setText("Surprise Me");
+		jbutton1.setText("May");
 		jbutton.addActionListener(this);
+		jbutton1.addActionListener(this);
+		jframe.pack();
+		
 	}
 
 	public static void main(String[] args) {
 		new _06_IPodShuffle();
 	}
 
-	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-
+	
 	}
 
-	@Override
 	public void keyPressed(KeyEvent e) {
-		// if(jbutton.e.getSource()==) {
 
-		// }
 	}
-
-	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
+		
 
 	}
-
-	@Override
 	public void actionPerformed(ActionEvent e) {
-		// if(jbutton==true) {
-		// playrandommusic;
-		// }
+		if(e.getSource()==jbutton) {
+		JOptionPane.showMessageDialog(null, "Music");
+		name.stop();
+		name2.play();
+		}
+		if(e.getSource()==jbutton1) {
+		JOptionPane.showMessageDialog(null, "Matthew's favorite instrument");
+		name2.stop();
+		name.play();
+		}
 	}
 }
