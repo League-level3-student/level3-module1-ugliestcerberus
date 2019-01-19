@@ -47,7 +47,7 @@ public class IntegerStack {
 	// 5. Complete the clear method to set the
 	// member array to a new array of length 0
 	public void clear() {
-		;
+		numbers.setlength(vast);
 	}
 
 	// 6. Complete the size array to return
@@ -60,5 +60,6 @@ public class IntegerStack {
 		IntegerStack newstack = new IntegerStack();
 		newstack.push(5);
 		newstack.push(9);
+
 	}
 }
