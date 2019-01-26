@@ -35,6 +35,8 @@ public class IntegerStack {
 		int[] letters = new int [numbers.length-1];
 		letters[0]= 12;
 		letters[1]= 13;
+		letters[2]=10;
+		letters[3]=19; 
 		// C. iterate through the new array and copy every element from the
 		// member array to the new array
 		for(int u=0; u<letters.length; u++) {
@@ -45,6 +47,7 @@ public class IntegerStack {
 		// E. return the variable you created in step A
 		return vast1;
 	}
+	
 	// 5. Complete the clear method to set the
 	// member array to a new array of length 0
 	public void clear() {
