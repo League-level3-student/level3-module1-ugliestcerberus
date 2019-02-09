@@ -22,6 +22,7 @@ public class IntegerStack {
 		// array
 		for (int i = 0; i < numbers.length; i++) {
 			numbers1[i] = numbers[i];
+			// Review this.
 		}
 		// D. set the member array equal to the new array.
 		numbers = numbers1;
@@ -42,6 +43,7 @@ public class IntegerStack {
 		// member array to the new array
 		for (int u = 0; u < letters.length; u++) {
 			letters[u] = numbers[u];
+			// Review this
 		}
 		// D. set the member array equal to the new array
 		numbers = letters;
