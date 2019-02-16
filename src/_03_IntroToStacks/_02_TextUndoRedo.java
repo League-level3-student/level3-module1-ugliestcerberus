@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Stack;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,6 +31,7 @@ public class _02_TextUndoRedo implements MouseListener, KeyListener {
 	
 	JPanel jpanel = new JPanel();
 	JLabel jlabel = new JLabel();
+	Stack stack= new Stack();
 	public static void main(String[]args) {
 		_02_TextUndoRedo textUndoRedo= new _02_TextUndoRedo();
 		textUndoRedo.createUI();
@@ -39,6 +41,11 @@ public class _02_TextUndoRedo implements MouseListener, KeyListener {
 	MouseEvent key;
 	private void createUI() {
 		jframe.setVisible(true);
+		jframe.setSize(500,500);
+		jframe.add(jpanel);
+		jpanel.add(jlabel);
+		jpanel.addMouseListener(this);
+		jpanel.addKeyListener(this);
 	}
 	public void mouseClicked(MouseEvent e) {
 		
