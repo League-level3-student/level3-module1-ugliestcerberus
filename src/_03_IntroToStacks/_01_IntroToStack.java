@@ -26,15 +26,17 @@ public class _01_IntroToStack {
 
 		// 4. Pop all the elements off of the Stack. Every time a double is popped that
 		// is between the two numbers entered by the user, print it to the screen.
-		int mk = math.size();
+		int mk = man.size();
 
-		// for (int n = 0; n < mk; n ++) {
-		while (!math.empty()) {
-			System.out.println(math.pop());
-
+		//for (int n = 0; n < mk; n ++) {
+		while (!man.empty()) {
+			double popped= man.pop();
+			if(firstnumber<popped && popped<secondnumber) {
+			System.out.println(popped);
+			}
 		}
 
-		// }
+		
 
 		// EXAMPLE:
 		// NUM 1: 65

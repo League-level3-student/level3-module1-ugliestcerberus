@@ -1,5 +1,7 @@
 package _03_IntroToStacks;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -7,8 +9,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class _02_TextUndoRedo implements MouseListener {
-	/*
+public class _02_TextUndoRedo implements MouseListener, KeyListener {
+	 /*
 	 * 1. Create a JFrame with a JPanel and a JLabel.
 	 * 
 	 * 
@@ -25,16 +27,25 @@ public class _02_TextUndoRedo implements MouseListener {
 	 */
 	// 1.
 	JFrame jframe = new JFrame();
+	
 	JPanel jpanel = new JPanel();
 	JLabel jlabel = new JLabel();
-	// jpanel.add(jframe);
-
+	public static void main(String[]args) {
+		_02_TextUndoRedo textUndoRedo= new _02_TextUndoRedo();
+		textUndoRedo.createUI();
+		
+	}
+	//2.
+	MouseEvent key;
+	private void createUI() {
+		jframe.setVisible(true);
+	}
 	public void mouseClicked(MouseEvent e) {
-
+		
 	}
 
 	public void mousePressed(MouseEvent e) {
-
+		
 	}
 
 	public void mouseReleased(MouseEvent e) {
@@ -45,9 +56,22 @@ public class _02_TextUndoRedo implements MouseListener {
 
 	}
 
-	@Override
 	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-
+	
 	}
+
+	public void keyTyped(KeyEvent e) {
+		
+	}
+
+	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode()==KeyEvent.VK_BACK_SPACE) {
+			
+		}
+	}
+
+	public void keyReleased(KeyEvent e) {
+		
+	}
+	
 }
