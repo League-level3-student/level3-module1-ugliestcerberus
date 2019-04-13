@@ -9,7 +9,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class HangMan implements KeyListener{
-	//Step 1. Make a new stack. Use readfromRandomline to ensure that not the same set of words are played. Same with contains in order to get rid of duplicates
 	Stack math= new Stack();
 	String duplicates= "";
 	JLabel jlabel= new JLabel();
@@ -27,6 +26,7 @@ void createUI(){
 jframe.setVisible(true);
 jframe.add(jlabel);
  	math.push("dictionary.txt");
+ 	jframe.setSize(1000,1000);
 //math.contains(dictionary.txt);	 
  }
 
