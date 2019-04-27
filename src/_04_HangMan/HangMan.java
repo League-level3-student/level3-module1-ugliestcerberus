@@ -15,7 +15,7 @@ public class HangMan implements KeyListener{
 	JFrame jframe= new JFrame();
 	JPanel jpanel= new JPanel();
 	int numberoflives= 10;
-	String text= "_____________________";
+	String text= "";
 	//dictionary
 	
 	//KeyListener has= new KeyListener();
@@ -31,14 +31,17 @@ jframe.setVisible(true);
 jframe.add(jlabel);
 jframe.setSize(1000,1000);
 jframe.add(jpanel);
+jpanel.add(jlabel);
+//jlabel.setText("lives");
 String mass= JOptionPane.showInputDialog("How many words do you want?");
 int numberoftimes=Integer.parseInt(mass);
-for(int y= 0; y<numberoftimes; y++) {
-	math.push(Utilities.readRandomLineFromFile("dictionary.txt"));
+math.push(Utilities.readRandomLineFromFile("dictionary.txt"));
+String word= math.pop();
+for(int y= 0; y<word.length(); y++) {
+text +="_";
 }
-math.contains(true);
-//dictionary.txt();
-//math.contains(dictionary.txt);	
+jlabel.setText(text) ;
+
 
 }
 
@@ -46,25 +49,19 @@ public void keyTyped(KeyEvent e) {
 		
 }
 public void keyPressed(KeyEvent e) {
-	//if(e.getSource()) {	
-	//}
-jlabel.setText(math.pop());		
-String letters= JOptionPane.showInputDialog("Please type in some letters");
-if(tes) {
+	for(int y= 0; y<word.length(); y++) {
+		if(e.getKeyChar()==text) {
+		System.out.println(word);
+	}
+		}
 	
 }
-//1. Type in some code that pops out the words 2. collect some inputs 3. if statement whether the key words are correct
 }
-
 public void keyReleased(KeyEvent e) {
 	
-for(int t=0; t<10; t++) {
+
 	
 }
-
-
-}
-
 
 
 
