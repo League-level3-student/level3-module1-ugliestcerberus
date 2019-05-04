@@ -58,6 +58,9 @@ public void keyPressed(KeyEvent e) {
 	if(word.charAt(y)==pressed){
 		sb.setCharAt(y,pressed);
 	}
+	else if(numberoflives==0) {
+		
+	}
 	else {
 		numberoflives -=1;
 	}
