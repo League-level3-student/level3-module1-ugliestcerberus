@@ -61,7 +61,7 @@ public void keyPressed(KeyEvent e) {
 	for(int y= 0; y<text.length(); y++) {
 	if(word.charAt(y)==pressed){
 		sb.setCharAt(y,pressed);
-	if(word.equals(sb)) {
+	if(sb.toString()) {
 		JOptionPane.showMessageDialog(null,"You win!");
 		JOptionPane.showConfirmDialog(null,"Wanna play again");
 	}
