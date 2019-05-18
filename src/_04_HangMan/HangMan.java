@@ -21,14 +21,19 @@ public class HangMan implements KeyListener{
 	String text= "";
 	ArrayList<Character> letterbank= new ArrayList<Character>();
 	String word;
+	//HangMan matt= new HangMan();
+	
 	
 public static void main(String[]args) {	
 	
 	HangMan matthew= new HangMan();
+	
 	matthew.createUI();
-	//Utilities.readRandomLineFromFile();
 	
 }
+
+
+
 void createUI(){
 jframe.setVisible(true);
 jframe.add(jlabel);
@@ -48,7 +53,6 @@ text +="_";
 jlabel.setText(text) ;
 jframe.addKeyListener(this);
 
-
 }
 
 public void keyTyped(KeyEvent e) {
@@ -61,24 +65,39 @@ public void keyPressed(KeyEvent e) {
 	for(int y= 0; y<text.length(); y++) {
 	if(word.charAt(y)==pressed){
 		sb.setCharAt(y,pressed);
-	if(sb.toString()) {
-		JOptionPane.showMessageDialog(null,"You win!");
-		JOptionPane.showConfirmDialog(null,"Wanna play again");
+		if(sb.toString().equals(word) ) {
+	JOptionPane.showMessageDialog(null,"You win!");
+	JOptionPane.showConfirmDialog(null,"Wanna play again");
 	}
 	}
 	
-	else if(word.charAt(y)!=pressed && !letterbank.contains(pressed)) {
+	if(word.charAt(y)!=pressed && !letterbank.contains(pressed)&& !word.contains(pressed+ "")) {
 		System.out.println(numberoflives -= 1);
 		jlabel2.setText("number of lives:" + numberoflives);
 		letterbank.add(pressed);
 	}
-	else if(numberoflives==0){
+	if(numberoflives==0){
 		JOptionPane.showMessageDialog(null,"GameOver");
 		JOptionPane.showMessageDialog(null, "Here is the word" + word);
 		int integer= JOptionPane.showConfirmDialog(null, "Wanna Play again?");
-		if(integer==1) {
+		if(integer==1||integer==2) {
 		System.exit(0);	
 		}
+		else if(integer==0) {
+		word= math.pop();
+			text= "";
+			
+		for(int u=0; u<word.length(); u++) {
+			
+		text +="_";	
+		}
+		jlabel.setText(text);
+		numberoflives= 10;	
+		letterbank.clear();
+		jlabel2.setText("number of lives: " + numberoflives);	
+	
+		}
+		
 		
 	}
 	}
