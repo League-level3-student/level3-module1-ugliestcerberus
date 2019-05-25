@@ -42,10 +42,12 @@ jframe.add(jpanel);
 jpanel.add(jlabel);
 jpanel.add(jlabel2);
 jlabel2.setText("number of lives:" + numberoflives);
-//jlabel.setText("lives");
 String mass= JOptionPane.showInputDialog("How many words do you want?");
 int numberoftimes=Integer.parseInt(mass);
-math.push(Utilities.readRandomLineFromFile("dictionary.txt"));
+for(int u=0; u<numberoftimes; u++) {
+math.push(Utilities.readRandomLineFromFile("dictionary.txt"));	
+}
+
 word= math.pop();
 for(int y= 0; y<word.length(); y++) {
 text +="_";
@@ -60,38 +62,79 @@ public void keyTyped(KeyEvent e) {
 }
 public void keyPressed(KeyEvent e) {
 	StringBuilder sb= new StringBuilder(jlabel.getText());
+	
 	char pressed= e.getKeyChar();
-	JLabel jlabel3= new JLabel();
 	for(int y= 0; y<text.length(); y++) {
 	if(word.charAt(y)==pressed){
-		sb.setCharAt(y,pressed);
-		if(sb.toString().equals(word) ) {
-	JOptionPane.showMessageDialog(null,"You win!");
-	JOptionPane.showConfirmDialog(null,"Wanna play again");
+		sb.setCharAt(y,pressed);	
 	}
+	
+	if(sb.toString().equals(word) ) {
+	JOptionPane.showMessageDialog(null,"You win!");
+	int integer= JOptionPane.showConfirmDialog(null,"Wanna play again");
+	
+		if(integer==1||integer==2) {
+			System.exit(0);	
+			}
+			else if(integer==0) {
+				
+				if(!math.empty()) {
+					word= math.pop();
+				}
+				else {
+					System.exit(0);
+				}
+			
+			text= "";
+				
+			for(int u=0; u<word.length(); u++) {
+				
+			text +="_";	
+			}
+			jlabel.setText(text);
+			sb= new StringBuilder(jlabel.getText());
+			
+			numberoflives= 10;	
+			jlabel2.setText("number of lives: " + numberoflives);	
+		
+			}
 	}
 	
 	if(word.charAt(y)!=pressed && !letterbank.contains(pressed)&& !word.contains(pressed+ "")) {
-		System.out.println(numberoflives -= 1);
+		numberoflives--;
 		jlabel2.setText("number of lives:" + numberoflives);
 		letterbank.add(pressed);
 	}
+	}
+	
+	
+	
+	
 	if(numberoflives==0){
 		JOptionPane.showMessageDialog(null,"GameOver");
-		JOptionPane.showMessageDialog(null, "Here is the word" + word);
+		JOptionPane.showMessageDialog(null, "Here is the word " + word);
 		int integer= JOptionPane.showConfirmDialog(null, "Wanna Play again?");
+		
 		if(integer==1||integer==2) {
 		System.exit(0);	
 		}
 		else if(integer==0) {
-		word= math.pop();
-			text= "";
+			
+			if(!math.empty()) {
+				word= math.pop();
+			}
+			else {
+				System.exit(0);
+			}
+		
+		text= "";
 			
 		for(int u=0; u<word.length(); u++) {
 			
 		text +="_";	
 		}
 		jlabel.setText(text);
+		sb= new StringBuilder(jlabel.getText());
 		numberoflives= 10;	
 		letterbank.clear();
 		jlabel2.setText("number of lives: " + numberoflives);	
@@ -100,8 +143,9 @@ public void keyPressed(KeyEvent e) {
 		
 		
 	}
-	}
+	
 	jlabel.setText(sb.toString());
+	
 }
 
 public void keyReleased(KeyEvent e) {
